@@ -4,7 +4,7 @@
   "description": "Setup inicial de backend con typescript",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "tsc && node dist/server.js",
     "dev": "nodemon src/server.ts --exec ts-node",
     "build": "tsc"
   },

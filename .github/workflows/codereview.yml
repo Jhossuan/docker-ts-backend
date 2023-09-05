@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: '14'
 
+      - name: 🔨 Instalación de dependencias
+        run: |
+          npm install
+
       - name: 🎈 Usar la action personalizada
         id: comment
         uses: drenvio/drenvio-pr-ai-reviewer@v1.0.0

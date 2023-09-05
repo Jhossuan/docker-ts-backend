@@ -19,7 +19,7 @@ jobs:
 
       - name: 🎈 Usar la action personalizada
         id: comment
-        uses: drenvio/drenvio-pr-ai-reviewer@v1.0.1
+        uses: drenvio/drenvio-pr-ai-reviewer@v1.0.0
         with:
           github-token: ${{ secrets.TOKEN_GITHUB }}
           pr-number: ${{ github.event.pull_request.number }}

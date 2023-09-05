@@ -1,0 +1,26 @@
+name: 🎈 Action personalizada
+
+on:
+  pull_request:
+    branches:
+      - workflows
+
+jobs:
+  comment_and_rate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: 🎈 Usar la action personalizada
+        id: comment
+        uses: drenvio/drenvio-pr-ai-reviewer@v1.0.1
+        with:
+          github-token: ${{ secrets.TOKEN_GITHUB }}
+          pr-number: ${{ github.event.pull_request.number }}
+          comment: 'Comentario de prueba, de la action personalizada'
